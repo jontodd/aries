@@ -1,0 +1,9 @@
+aries:
+  build: .
+  ports:
+    - "8080:8080"
+    - "8081:8081"
+    - "8082:8082"
+  environment:
+    # Enable debugging. NOTE: for dev use only, don't run in production 
+    ARIES_JAVA_ARGS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8082
